@@ -26,13 +26,13 @@ The buttons are all functional, meaning clicking on "my list" will allow it to b
 
 #### Coming Soon:
 
-The coming soon section has 3 titles that display some information similarly to the home and other pages.
+The coming soon section has 3 titles that display some information similar to the home and other pages.
 
 ![Coming Soon Screenshot](github_images/screenshot-2.png)
 
 #### Search:
 
-The search page allows you to find any of the titles from the main data base and allows you to play them. The amount of titles are very limited so for this application I simply used linear search to just compare the strings together.
+The search page allows you to find any of the titles from the main database and allows you to play them. The amount of titles is very limited so for this application I simply used linear search to just compare the strings together.
 
 ![Search Screenshot](github_images/screenshot-3.png)
 
@@ -44,11 +44,11 @@ The downloads page has a dummy few titles, no titles are actually downloaded and
 
 ### Extra Features:
 
-There are a few extra features in the application such as the "My List" section to add and remove titles you would want to see, playing a movie or show (again as previously stated there is no video data in this project) and a minimal settings page.
+There are a few extra features in the application such as the "My List" section to add and remove titles you would want to see, playing a movie or show (again as previously stated there is no video data in this project), and a minimal settings page.
 
 #### My List:
 
-Here is the list where all the titles that we're selected to be in the list are presented:
+Here is the list where all the titles that we've selected to be in the list are presented:
 
 ![My List Screenshot](github_images/screenshot-5.png)
 
@@ -60,33 +60,33 @@ The video view has some buttons that don't do anything but the close button will
 
 #### Settings:
 
-The settings portion of the app is a minimal section with only access to "My List" view and no other core features. To access the settings you would click on the profile picture in the application.
+The settings portion of the app is a minimal section with only access to the "My List" view and no other core features. To access the settings you would click on the profile picture in the application.
 
 ![Settings Screenshot](github_images/screenshot-7.png)
 
 ## The Code Structure:
 
-The code as expected is written in Swift with multiple different SwiftUI views and one class that contains helper functions to request data from the data base.
+The code as expected is written in Swift with multiple different SwiftUI views and one class that contains helper functions to request data from the database.
 
 ### Core SwiftUI Views:
 
 #### Main Views:
 
-The application as previously stated has 4 main pages that serve as the layout of the application all stored on a `TabView` to allow different pages to be access and using the `NavigationView` and `NavigationLink` structures to go to different pages. All the core views are called `HomeView`, `SearchView`, `DownloadView`, and `ComingSoonView`.
+The application as previously stated has 4 main pages that serve as the layout of the application all stored on a `TabView` to allow different pages to be accessed and using the `NavigationView` and `NavigationLink` structures to go to different pages. All the core views are called `HomeView`, `SearchView`, `DownloadView`, and `ComingSoonView`.
 
 #### Secondary Views:
 
 The home view is split up into 4 different views:
 
-- `HomeHeaderView`: This view is first main title that is presented on the home screen (the input is a number to see which title is being first presented based on the `definitionsKeys` property).
+- `HomeHeaderView`: This view is a first main title that is presented on the home screen (the input is a number to see which title is being first presented based on the `definitionsKeys` property).
 - `HomeCircleListView`: This view is the part where there are some suggestions that are circled in a horizontal scroll view.
-- `HomeContinueWatchingView`: These are the titles that the user last watched based on what the data base has it stored as
+- `HomeContinueWatchingView`: These are the titles that the user last watched based on what the database has stored as
   - *NOTE: This doesn't update as the user clicks on play titles this is a dummy section that doesn't update.*
 - `HomeListView`: This is the section that displays all the different categories for the different titles in the home screen application.
 
 There are 4 other views that support the application:
 
-- `SettingsView`: The settings page that is accessed once the user clicked on the profile picture.
+- `SettingsView`: The settings page that is accessed once the user clicks on the profile picture.
 - `MyListView`: This is the view that shows all the different tiles that were selected to be in the list.
 - `VideoPlayView`: This is the view that shows when a video is being played (again no real video data is in the application)
 - `ItemDataView`: This is the view that shows the different little details about the title.
@@ -104,10 +104,10 @@ VStack {
   Text("Hello world!")
 }
 .onAppear {
-  // when the view is loaded:
+  // When the view is loaded:
   
   UINavigationController.attemptRotationToDeviceOrientation()
-  // it will force the device to rotate
+  // It will force the device to rotate
   
   UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
   // and set the new orientation
@@ -120,19 +120,19 @@ VStack {
 The main class that contains all the helper functions in this application is named `NetflixHelper` which has methods to access the JSON data. The core methods of this class are as follows:
 
 - `getData`: The function to extract the core data that is used by a lot of the views
-- `getImageFromBundle`: The function to get an image from the data base
+- `getImageFromBundle`: The function to get an image from the database
 
 ### The Data:
 
 As previously stated, primary access to the data in the code is done with the method `NetflixHelper.getData()` which returns a JSON object (thanks to SwiftyJSON) and allows the views to read the data. 
 
-The `data.json` file has all the core movies and shows based on their categories, and areas such as downloads, coming soon and other data. The titles are stored as hexadecimal ids with a hashtable to have the name of the title based on the id.
+The `data.json` file has all the core movies and shows based on their categories, and areas such as downloads, coming soon, and other data. The titles are stored as hexadecimal IDs with a hashtable to have the name of the title based on the ID.
 
-The `data` folder has all the different images for the titles with it's name and 3 different PNG images for either the `title`, `cover`, and `background`.
+The `data` folder has all the different images for the titles with its name and 3 different PNG images for the `title`, `cover`, and `background`.
 
 ## More Screenshots:
 
-This is the information card that is rendered when you select on a title:
+This is the information card that is rendered when you select a title:
 
 ![Settings Screenshot](github_images/screenshot-8.png)
 
@@ -149,5 +149,5 @@ Libraries used for this application:
 
 All the pictures were taken from:
 
-- [Netflix INC](https://www.netflix.com/): The netflix website directly
+- [Netflix INC](https://www.netflix.com/): The Netflix website directly
 - [Google](https://google.com/): From google images on the first results of certain shows
