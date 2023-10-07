@@ -2,7 +2,7 @@
 //  PresentFunctions.swift
 //  Netflix SwiftUI
 //
-//  Created by Cherif, Fedy on 1/9/21.
+//  Created by C, Fedy on 1/9/21.
 //
 
 import UIKit

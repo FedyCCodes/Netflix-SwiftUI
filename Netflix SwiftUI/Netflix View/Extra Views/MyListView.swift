@@ -2,7 +2,7 @@
 //  NetflixHelper.myListView.swift
 //  Netflix SwiftUI
 //
-//  Created by Cherif, Fedy on 6/24/23.
+//  Created by C, Fedy on 6/24/23.
 //
 
 import SwiftUI

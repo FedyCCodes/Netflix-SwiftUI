@@ -2,7 +2,7 @@
 //  HomeCircleListView.swift
 //  Netflix SwiftUI
 //
-//  Created by Cherif, Fedy on 1/3/21.
+//  Created by C, Fedy on 1/3/21.
 //
 
 import SwiftUI

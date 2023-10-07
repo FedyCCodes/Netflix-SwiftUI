@@ -2,7 +2,7 @@
 //  SearchView.swift
 //  Netflix SwiftUI
 //
-//  Created by Cherif, Fedy on 12/18/20.
+//  Created by C, Fedy on 12/18/20.
 //
 
 import SwiftUI
